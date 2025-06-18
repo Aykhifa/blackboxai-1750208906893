@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SidakRT | Sistem Informasi Data Kependudukan RT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+    /* Carousel styles */
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slide img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.3);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 0.375rem;
+      user-select: none;
+    }
+    .carousel-button:hover {
+      background: rgba(0,0,0,0.6);
+    }
+    .carousel-button.prev {
+      left: 1rem;
+    }
+    .carousel-button.next {
+      right: 1rem;
+    }
+    a:focus, button:focus {
+      outline: 2px solid #000;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-200 fixed w-full z-30 top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex-shrink-0 font-semibold text-xl text-black">SidakRT</div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="text-black hover:underline font-medium">Home</a>
+          <a href="#about" class="text-black hover:underline font-medium">About</a>
+          <a href="#profile" class="text-black hover:underline font-medium">Profile</a>
+          <a href="#adart" class="text-black hover:underline font-medium">AD / ART</a>
+          <a href="#pengumuman" class="text-black hover:underline font-medium">Pengumuman</a>
+          <a href="#berita" class="text-black hover:underline font-medium">Berita</a>
+          <a href="#contact" class="text-black hover:underline font-medium">Contact</a>
+          <a href="#login" class="text-black hover:underline font-medium">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Hero Section -->
+    <section id="home" class="text-center py-16">
+      <h1 class="text-4xl font-extrabold mb-4">Selamat datang di SidakRT</h1>
+      <p class="text-lg max-w-xl mx-auto mb-6">Sistem Informasi Data Kependudukan RT</p>
+      <p class="max-w-xl mx-auto text-gray-700">SidakRT-003-014-GIS<br />Desa GUNUNGSINDUR, Kec. Gunung Sindur, Kab. Bogor.<br />+62 856-9122-6511 admin@rt0314.sidakrt.com</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 border-t border-gray-200">
+      <h2 class="text-3xl font-bold mb-6 text-center">About Us</h2>
+      <p class="max-w-3xl mx-auto mb-8 text-center text-gray-800">
+        Sistem Informasi Data Kependudukan RT atau lebih populer di singkat <strong>SiDakRT</strong> merupakan aplikasi sistem informasi di lini RT-RW untuk mempermudah administrasi warga dan informasi ke warga RT.
+      </p>
+      <p class="max-w-3xl mx-auto mb-8 text-center text-gray-800">
+        Dengan SiDakRT ini diharapkan dapat meningkatkan eksistensi dalam rangka meng-optimal-kan peran dan fungsi perangkat RT sebagai institusi pelayanan masyarakat serta membantu men-sosialisasi-kan program-program pemerintah kepada masyarakat. Pengembangan website ini disamping untuk memenuhi kebutuhan internal pengurus, juga ditujukan guna memenuhi harapan masyarakat terkait kebutuhan informasi data dan pelayanan yang diselenggarakan oleh pengurus RT.
+      </p>
+      <p class="max-w-3xl mx-auto mb-12 text-center text-gray-800">
+        Untuk memenuhi harapan tersebut tentunya tidak akan sempurna jika tidak ada partisipasi aktif dari berbagai pihak. Dan kritik serta saran sangat kami harapkan, demikian juga kepada seluruh perangkat kelurahan diharapkan dapat merespon dan berbagi masukan yang sekiranya bermanfaat / membangun bagi kemajuan RT khususnya dan Desa pada umumnya.
+      </p>
+
+      <!-- Carousel -->
+      <div class="carousel-container max-w-4xl mx-auto relative">
+        <div class="carousel-slide" id="carousel-slide">
+          <img src="https://rt0314.sidakrt.com/storage/img/slides/aulart0314-pre.jpg" alt="Slide 1" />
+          <img src="https://rt0314.sidakrt.com/storage/img/slides/kerjabakti_pangkaspohon.jpeg" alt="Slide 2" />
+          <img src="https://rt0314.sidakrt.com/storage/img/slides/kerjabakti_gapura.jpeg" alt="Slide 3" />
+          <img src="https://rt0314.sidakrt.com/storage/img/slides/slide3.jpg" alt="Slide 4" />
+          <img src="https://rt0314.sidakrt.com/storage/img/slides/kerjabakti_gapurablkg.jpeg" alt="Slide 5" />
+          <img src="https://rt0314.sidakrt.com/storage/img/slides/slide2.jpg" alt="Slide 6" />
+          <img src="https://rt0314.sidakrt.com/storage/img/slides/slide1.jpg" alt="Slide 7" />
+        </div>
+        <button class="carousel-button prev" aria-label="Previous Slide" id="prevBtn">&#10094;</button>
+        <button class="carousel-button next" aria-label="Next Slide" id="nextBtn">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Visi & Misi Section -->
+    <section id="visi-misi" class="py-16 border-t border-gray-200 max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Visi &amp; Misi</h2>
+      <div class="flex flex-col md:flex-row md:space-x-12 items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img src="https://rt0314.sidakrt.com/assets/imgs/img-5.jpg" alt="Visi & Misi" class="rounded-lg shadow-md" />
+        </div>
+        <div class="md:w-1/2 text-gray-800">
+          <h3 class="text-xl font-semibold mb-2">VISI</h3>
+          <p class="mb-6 italic">“Terwujudnya kerukunan hidup antar warga yang dilandasi dengan akhlaq mulia dan toleransi kebersamaan yang harmonis, aman, damai dan sejahtera”</p>
+          <h3 class="text-xl font-semibold mb-2">MISI</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li>Menjalin kerukunan antar warga, umat beragama dan bernegara</li>
+            <li>Menjalin Kerjasama dalam menjaga dan memelihara kebersihan dan keamanan lingkungan.</li>
+            <li>Santun dalam menghadapi suatu persoalan yang dihadapi dari Internal maupun Eksternal</li>
+            <li>Bersifat Obyektif dan Transparan dalam pengelolaan administratif</li>
+            <li>Memfasilitasi keinginan warga dalam berbagai kegiatan social.</li>
+            <li>Meningkatkan mutu pelayanan warga dalam hal administrasi kependudukan.</li>
+            <li>Menggali potensi warga untuk pemberdayaan dan peningkatan ekonomi warga.</li>
+            <li>Melaksanakan program kegiatan pendidikan dan kerohanian.</li>
+            <li>Siap melaksanakan program-program yang dilontarkan pemerintah Desa</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pengumuman Section -->
+    <section id="pengumuman" class="py-16 border-t border-gray-200 max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Pengumuman</h2>
+
+      <!-- Announcement 1 -->
+      <article class="mb-12 border-b border-gray-300 pb-6">
+        <img src="https://rt0314.sidakrt.com/storage/img/blog/1661036931firstgroundingaulart03.jpg" alt="Pengumuman Kerjabakti" class="w-full rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Pengumuman Kerjabakti</h3>
+        <p class="mb-2 italic">Assalamu'alaikum warahmatullaahi wabarakaatuh,</p>
+        <p class="mb-2">
+          Menghimbau kepada seluruh bapak2 warga Rt.03 yang ada waktu untuk menghadiri kegiatan Rt pada
+        </p>
+        <ul class="list-disc list-inside mb-2">
+          <li>Hari/tanggal: Minggu, 21 Agustus 2022</li>
+          <li>Pukul : 07:30 WIB</li>
+          <li>Kegiatan: Kerjabakti pengecoran pondasi aula Rt03</li>
+        </ul>
+        <p>Demikian pengumuman ini disampaikan agar menjadikan perhatian. Terima kasih.</p>
+        <p class="mt-2 font-semibold">Pengurus RT.03/14</p>
+        <p class="text-sm text-gray-600">Oleh: Wagiman</p>
+      </article>
+
+      <!-- Announcement 2 -->
+      <article class="mb-12 border-b border-gray-300 pb-6">
+        <img src="https://rt0314.sidakrt.com/storage/img/blog/1660636414lomba17an.png" alt="Pelaksanaan Lomba 17an" class="w-full rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Pelaksanaan Lomba 17an</h3>
+        <p class="mb-2">
+          Diberitahukan kepada seluruh warga RT.03 RW.14, baik yang tua, muda, anak-anak, semuanya, diharapkan kedatangannya pada acara lomba 17-an di lingkungan RT03 RW.14 yang akan dilaksanakan pada:
+        </p>
+        <ul class="list-disc list-inside mb-2">
+          <li>Hari/tanggal    : Rabu, 17 Agustus 2022</li>
+          <li>Jam               : 10:00 WIB s.d Selesai</li>
+          <li>Tempat          : Lapangan Bulu tangkis RT.03 RW.14</li>
+        </ul>
+        <p>Ayo semarakan kemeriahan kemerdekaan ke-77 Indonesia Merdeka</p>
+        <p class="mt-2 font-semibold">Pengurus RT.03/14</p>
+        <p class="text-sm text-gray-600">Oleh: Wagiman</p>
+      </article>
+
+      <!-- Repeat announcements as per content (duplicated for demo) -->
+      <article class="mb-12 border-b border-gray-300 pb-6">
+        <img src="https://rt0314.sidakrt.com/storage/img/blog/1661036931firstgroundingaulart03.jpg" alt="Pengumuman Kerjabakti" class="w-full rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Pengumuman Kerjabakti</h3>
+        <p class="mb-2 italic">Assalamu'alaikum warahmatullaahi wabarakaatuh,</p>
+        <p class="mb-2">
+          Menghimbau kepada seluruh bapak2 warga Rt.03 yang ada waktu untuk menghadiri kegiatan Rt pada
+        </p>
+        <ul class="list-disc list-inside mb-2">
+          <li>Hari/tanggal: Minggu, 21 Agustus 2022</li>
+          <li>Pukul : 07:30 WIB</li>
+          <li>Kegiatan: Kerjabakti pengecoran pondasi aula Rt03</li>
+        </ul>
+        <p>Demikian pengumuman ini disampaikan agar menjadikan perhatian. Terima kasih.</p>
+        <p class="mt-2 font-semibold">Pengurus RT.03/14</p>
+        <p class="text-sm text-gray-600">Oleh: Wagiman</p>
+      </article>
+
+      <article class="mb-12 border-b border-gray-300 pb-6">
+        <img src="https://rt0314.sidakrt.com/storage/img/blog/1660636414lomba17an.png" alt="Pelaksanaan Lomba 17an" class="w-full rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Pelaksanaan Lomba 17an</h3>
+        <p class="mb-2">
+          Diberitahukan kepada seluruh warga RT.03 RW.14, baik yang tua, muda, anak-anak, semuanya, diharapkan kedatangannya pada acara lomba 17-an di lingkungan RT03 RW.14 yang akan dilaksanakan pada:
+        </p>
+        <ul class="list-disc list-inside mb-2">
+          <li>Hari/tanggal    : Rabu, 17 Agustus 2022</li>
+          <li>Jam               : 10:00 WIB s.d Selesai</li>
+          <li>Tempat          : Lapangan Bulu tangkis RT.03 RW.14</li>
+        </ul>
+        <p>Ayo semarakan kemeriahan kemerdekaan ke-77 Indonesia Merdeka</p>
+        <p class="mt-2 font-semibold">Pengurus RT.03/14</p>
+        <p class="text-sm text-gray-600">Oleh: Wagiman</p>
+      </article>
+    </section>
+
+    <!-- Berita Section -->
+    <section id="berita" class="py-16 border-t border-gray-200 max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Berita</h2>
+
+      <article class="mb-12 border-b border-gray-300 pb-6">
+        <img src="https://rt0314.sidakrt.com/storage/img/blog/166760690220221105_065722.jpg" alt="Cara Mendapatkan Set Top Box Gratis dari Pemerintah" class="w-full rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Cara Mendapatkan Set Top Box Gratis dari Pemerintah</h3>
+        <p class="mb-4">
+          Kominfo melakukan migrasi siaran TV analog ke digital yang dilakukan tiga tahap, yakni mulai dari 30 April 2022, 25 Agustus 2022, dan tahap ketiga pada 2 November 2022.
+        </p>
+        <p class="mb-4">
+          Dengan adanya migrasi ini, dibutuhkan Set Top Box (STB) untuk menikmati siaran TV digital. Tetapi, perlu diketahui tidak semua televisi membutuhkan STB. Hanya TV analog dan TV belum dibekali fitur DVB-T2 yang perlu dipasang set top box.
+        </p>
+        <p class="mb-4">
+          Pemerintah sendiri juga mendistribusikan Set Top Box (STB) gratis untuk keluarga miskin guna memperlancar migrasi ke siaran TV digital. Nah, bagi Anda yang belum mendapatkan STB caranya adalah sebagai berikut:
+        </p>
+        <ul class="list-disc list-inside mb-4">
+          <li>Mendaftarkan diri ke DTKS Kemensos dan memiliki satu unit TV analog di rumah.</li>
+          <li>Siapkan NIK KTP dan Kartu Keluarga (KK).</li>
+          <li>Kemudian, daftar secara online melalui aplikasi Cek Bansos.</li>
+          <li>Pada aplikasi Cek Bansos, lakukan pengecekan apakah nama Anda sudah terdaftar di DTKS Kemensos.</li>
+          <li>Jika sudah tervalidasi, nantinya Anda akan mendapatkan set top box gratis.</li>
+        </ul>
+        <p>
+          Untuk mendapatkan Set Top Box (STB) gratis dari pemerintah juga ada syarat-syaratnya. Berikut ini di antaranya.
+        </p>
+        <ul class="list-disc list-inside mb-4">
+          <li>Warga Negara Indonesia (harus dibuktikan dengan KTP) dan tergolong rumah tangga miskin dan mempunyai televisi (KK sebagai pelengkap).</li>
+          <li>Harus terdaftar dalam DTKS Kemensos atau data perangkat daerah di bidang sosial.</li>
+          <li>Lokasi penerima bantuan harus berada dalam cakupan yang terdampak Analog Switch Off (ASO).</li>
+        </ul>
+        <p>
+          Jika memenuhi syarat di atas, penyaluran Set Top Box (STB) gratis dari pemerintah akan dilakukan secara door to door sejak 15 Maret 2022 lalu.
+        </p>
+        <p>
+          <a href="https://www.kominfo.go.id/content/detail/39448/siaran-pers-no-10hmkominfo012022-tentang-terapkan-aso-menkominfo-pemerintah-bagi-112-wilayah-layanan-siaran-di-341-daerah/0/siaran_pers" target="_blank" class="text-blue-600 hover:underline">Wilayah terdampak ASO</a>
+        </p>
+      </article>
+
+      <!-- Additional news articles can be added similarly -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 border-t border-gray-200 max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Info</h2>
+      <p class="mb-2">Griya Indah Serpong Desa GUNUNGSINDUR, Kec. Gunung Sindur, Kab. Bogor</p>
+      <p class="mb-2">admin@rt0314.sidakrt.com</p>
+      <p class="mb-2">+62 856-9122-6511</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-300 py-6 text-center text-sm text-gray-600">
+      &copy; 2025 Pengurus RT. All Rights Reserved.
+    </footer>
+
+  </main>
+
+  <script>
+    // Carousel functionality
+    const carouselSlide = document.getElementById('carousel-slide');
+    const carouselImages = carouselSlide.querySelectorAll('img');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let counter = 0;
+    const size = carouselImages[0].clientWidth;
+
+    function updateCarousel() {
+      carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+
+    nextBtn.addEventListener('click', () => {
+      counter++;
+      if (counter >= carouselImages.length) {
+        counter = 0;
+      }
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      counter--;
+      if (counter < 0) {
+        counter = carouselImages.length - 1;
+      }
+      updateCarousel();
+    });
+
+    // On window resize, update size and reset transform
+    window.addEventListener('resize', () => {
+      const newSize = carouselImages[0].clientWidth;
+      carouselSlide.style.transition = 'none';
+      carouselSlide.style.transform = 'translateX(' + (-newSize * counter) + 'px)';
+      setTimeout(() => {
+        carouselSlide.style.transition = 'transform 0.5s ease-in-out';
+      }, 50);
+    });
+  </script>
+
+</body>
+</html>
